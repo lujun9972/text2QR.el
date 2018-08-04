@@ -12,9 +12,7 @@ It use QR code API to generate QR code. You can see the details in http://goqr.m
                    (buffer-substring-no-properties (region-beginning)
                                                    (region-end))
                  (read-string "The Text: ")))
-         (width 200)
-         (height 200)
-         (size (format "%sx%s" width height))
+         (size text2qr-size)
          (url "https://api.qrserver.com/v1/create-qr-code/"))
     (request url
              :sync t
